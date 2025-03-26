@@ -52,7 +52,7 @@ console.log(ique);
 
 // TESTANDO CONSTRUCTOR
 
-//construtor serve para darmos atributos prontos para objetos 
+//construtor serve para darmos parametros prontos para objetos 
 //que vamos criar depois da classe, facilitando a forma que
 // alteramos ou adicionamos valores nos nossos novos objetos!
 
@@ -62,9 +62,10 @@ class Pessoa {
     nome;
     idade;
 
-    constructor(){
-        this.nome = "luca";
-        this.idade = 55;
+    constructor(nome, idade){ //mini banquinho de dados!!!
+        this.nome = nome;
+        this.idade = idade;
+        this.nascimento = 2025 - idade;
     }
 
     descrever(){
@@ -72,8 +73,39 @@ class Pessoa {
     }
 }
 
-const lia = new Pessoa();
-const ique = new Pessoa(); // do que definir em cada um o nome e idade, colocamos no construtor e fazemos direto
+function comparar(p1, p2){ //facilidade em criar comparacoes pra objetos que serao criados ainda!
 
-lia.descrever();
-ique.descrever();
+    if(p1.idade > p2.idade){
+        console.log(`${p1.nome} é mais velha que ${p2.nome}`);
+    }
+    else if (p2.idade > p1.idade){
+        console.log (`${p2.nome} é mais velho que ${p1.nome}`);
+    }
+    else{
+            console.log("os dois tem a mesma idade!");
+        }
+    }
+    const lia = new Pessoa("giulia", 17);
+    const ique = new Pessoa("caique", 18);
+
+    comparar(lia, ique);
+/*
+const lia = new Pessoa("giulia", 17);
+const ique = new Pessoa("caique", 18); // do que definir em cada um o nome e idade, colocamos no construtor e fazemos direto
+
+ lia.descrever();
+ique.descrever();*/
+
+//antes 
+/* PS C:\Users\Lia\Documents\GitHub\javascript-dio\aula> node classes.js
+meu nome é luca e minha idade é 55
+meu nome é luca e minha idade é 55
+depois 
+PS C:\Users\Lia\Documents\GitHub\javascript-dio\aula> node classes.js
+meu nome é giulia e minha idade é 17
+meu nome é caique e minha idade é 18
+*/
+
+// quando aplico console.log(lia), aparece
+/* Pessoa { nome: 'giulia', idade: 17, nascimento: 2008 } */
+

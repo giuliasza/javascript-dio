@@ -149,7 +149,7 @@ console.log ("Olá! digite suas notas para dizer qual sua média \
     */
 
 // EXERCICIO CLASSE 1
-/*
+
 class Carro{
     marca;
     cor;
@@ -163,38 +163,11 @@ class Carro{
     }
     }
 
-function gasto(carrinho, consumoporKM){
-    gastomedio = (carrinho.km / consumoporKM) * carrinho.combustivel;
-    console.log(`o gasto médio do ${carrinho.marca} é de ${gastomedio.toFixed(2)} de combustível em ${carrinho.km} KM `);
+function gasto(){
+    console.log("eu sou um carro!");
 }
 
-const carro1 = new Carro("fiat", "roxo", 29.99, 50);
-gasto(carro1, 10);
+const carro1 = new Carro("fiat", "roxo", 5.99, 50);
+gasto(carro1);
 
-*/
-// EXERCICIO 2
-/*
-class Pessoa{
-    nome;
-    peso;
-    altura;
-    constructor(nome, peso, altura) {
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
-    }
-}
-function imc(p){
-    imcc = p.peso / (p.altura ** 2);
-    console.log("pois é, e você tem " + imcc.toFixed(1));
-}
 
-function clasi(pessoaa){
-    imuc = ["abaixo de peso", "peso normal", "acima do peso", "obeso", "obesidade grau 1", "obesidade grau 2", "obesidade grau 3"];
-    perg = readlineSync.keyInSelect(imuc, "Você se classifica em qual dessas?")
-}
-
-const ze = new Pessoa("josé", 70, 1.75);
-clasi(ze);
-imc(ze);
-*/
